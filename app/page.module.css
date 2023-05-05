@@ -110,7 +110,7 @@
 }
 
 .sendButton:hover {
-  transform: translateY(-50%) scale(1.1); /* added scale animation */
+  transform: scale(1.1); /* added scale animation */
 }
 
 .sendButton:active {
