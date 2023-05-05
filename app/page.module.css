@@ -97,10 +97,9 @@
   color: #ffffff;
   cursor: pointer;
   padding: 0;
-  position: absolute;
-  right: 1.6rem; /* adjusted */
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed; /* changed from absolute to fixed */
+  right: 1.5rem;
+  bottom: 1.5rem; /* changed from top: 50% */
   width: 22px;
   height: 22px;
 }
