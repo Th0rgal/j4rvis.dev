@@ -106,20 +106,9 @@
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .chatContainer {
-    max-width: 100%;
-    min-height: 100vh;
+    position: absolute;
     border: none;
-    margin: 0;
-  }
-
-  .main {
-    padding: 0;
-  }
-}
-
-/* Responsive design for larger screens */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .chatContainer {
-    max-width: 600px;
+    width: 100%;
+    height: 100%; /* Add this line */
   }
 }
