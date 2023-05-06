@@ -10,6 +10,7 @@
   max-width: 70%;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  white-space: pre-wrap;
 }
 
 .botMessage {
