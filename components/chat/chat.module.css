@@ -58,6 +58,11 @@
   left: 1rem;
 }
 
+.userInput.disabled::-webkit-input-placeholder {
+  text-align: center;
+  color: #dee0e4;
+}
+
 .sendButton {
   background-color: transparent;
   border: none;
@@ -75,8 +80,13 @@
   transform: scale(1.1); /* added scale animation */
 }
 
-.sendButton:active {
-  background-color: #0057cc;
+.loading {
+  position: absolute;
+  margin-right: 0.5rem;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+  width: 18px;
+  height: 18px;
 }
 
 /* Scrollbar styles for the messageWrapper */
