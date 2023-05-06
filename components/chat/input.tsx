@@ -89,7 +89,7 @@ export default function Input({
         onKeyDown={handleKeyPress}
       />
       {waiting ? (
-        <DotLoader color="#dee0e4" size={24} className={styles.loading} />
+        <DotLoader color="#9BABC1" size={24} className={styles.loading} />
       ) : (
         <SendIcon onMsg={handleSendMessage} />
       )}
