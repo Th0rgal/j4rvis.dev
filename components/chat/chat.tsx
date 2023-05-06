@@ -6,7 +6,7 @@ import Input from "./input";
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([
-    { content: "Hello mr Stark, how may I help you?", bot: true },
+    { content: "Hello Thomas, how may I help you?", bot: true },
   ]);
 
   const addMessage = (msg: Message) => {

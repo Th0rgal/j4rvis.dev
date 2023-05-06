@@ -20,7 +20,7 @@ import {
   InputValues,
   PartialValues,
 } from "langchain/schema";
-import { SerpAPI, Tool } from "langchain/tools";
+import { SerpAPI, Serper, Tool } from "langchain/tools";
 import { Calculator } from "langchain/tools/calculator";
 import { NextResponse } from "next/server";
 
@@ -116,8 +116,7 @@ export async function POST(request: Request) {
 
   const model = new ChatOpenAI({ temperature: 0.5 });
   const tools = [
-    new SerpAPI(process.env.SERPAPI_API_KEY, {
-      location: "Paris,Paris,Ile-de-France,France",
+    new Serper(process.env.SERPAPI_API_KEY, {
       hl: "en",
       gl: "fr",
     }),
