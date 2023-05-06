@@ -1,0 +1,23 @@
+/* Loader.module.css */
+.loaderWrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+  .loaderWrapper.show {
+    opacity: 1;
+  }
+  
+  .loader {
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  

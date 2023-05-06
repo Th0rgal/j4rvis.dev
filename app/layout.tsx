@@ -6,7 +6,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "J4rvis",
   description: "Thomas' personnal assistant",
-  icon: "/icon.svg",
 };
 
 export default function RootLayout({
