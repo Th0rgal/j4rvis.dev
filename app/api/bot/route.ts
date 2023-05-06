@@ -114,7 +114,7 @@ export async function POST(request: Request) {
   const query = JSON.parse(bodyText);
   const { input } = query;
 
-  const model = new ChatOpenAI({ temperature: 0 });
+  const model = new ChatOpenAI({ temperature: 0.5 });
   const tools = [
     new SerpAPI(process.env.SERPAPI_API_KEY, {
       location: "Paris,Paris,Ile-de-France,France",
