@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  themeColor: "#0D1620",
   title: "J4rvis",
   description: "Thomas' personnal assistant",
 };

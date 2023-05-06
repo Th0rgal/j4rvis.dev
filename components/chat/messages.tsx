@@ -1,4 +1,4 @@
-import Message from "@/components/messages/message";
+import Message from "@/components/chat/messages/message";
 import styles from "./chat.module.css";
 
 export default function Messages({ messages }: { messages: Message[] }) {

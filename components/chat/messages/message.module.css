@@ -5,6 +5,7 @@
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   display: inline-flex;
   background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   max-width: 70%;
@@ -19,5 +20,4 @@
 
 .userMessage {
   align-self: flex-end;
-  color: #ffffff;
 }
