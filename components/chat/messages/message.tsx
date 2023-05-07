@@ -9,7 +9,7 @@ export default function Message({
 }) {
   return (
     <div className={bot ? styles.botMessage : styles.userMessage}>
-      <p>{msg}</p>
+     {msg}
     </div>
   );
 }
