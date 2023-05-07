@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import autosize from "autosize";
 import styles from "./chat.module.css";
 import { DotLoader } from "react-spinners";
+import { useSendMessage } from "@/hooks/useSendMessage";
 
 export default function Input({
   addMessage,
@@ -10,8 +11,7 @@ export default function Input({
   addMessage: (msg: Message) => void;
 }) {
   const [userInput, setUserInput] = useState("");
-  const [waiting, setWaiting] = useState(false);
-
+  const { sendMessage, waiting } = useSendMessage(addMessage);
   const handleSendMessage = () => {
     const messageContent = userInput.trim();
     if (messageContent) {
@@ -33,23 +33,7 @@ export default function Input({
       }
 
       (async () => {
-        setWaiting(true);
-        // Send the POST request to /api/bot
-        const response = await fetch("/api/bot", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ input: messageContent }),
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          addMessage({ content: data.content, bot: true });
-        } else {
-          console.error("Error sending message to the bot");
-        }
-        setWaiting(false);
+        sendMessage(messageContent);
         if (shouldScrollToBottom && messageWrapper) {
           setTimeout(() => {
             messageWrapper.scrollTop =
