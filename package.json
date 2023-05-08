@@ -19,12 +19,15 @@
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
     "react-spinners": "^0.13.8",
+    "react-syntax-highlighter": "^15.5.0",
     "react-toastify": "^9.1.2",
     "server-only": "^0.0.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/autosize": "^4.0.1"
+    "@types/autosize": "^4.0.1",
+    "@types/react-syntax-highlighter": "^15.5.6"
   }
 }

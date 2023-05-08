@@ -1,0 +1,114 @@
+.md {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #fff;
+  line-height: 1.4;
+}
+
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6 {
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.md h1 {
+  font-size: 1.6em;
+}
+
+.md h2 {
+  font-size: 1.4em;
+}
+
+.md h3 {
+  font-size: 1.2em;
+}
+
+.md h4 {
+  font-size: 1.1em;
+}
+
+.md h5 {
+  font-size: 1em;
+}
+
+.md h6 {
+  font-size: 0.9em;
+}
+
+.md p {
+}
+
+.md ul,
+.md ol {
+  margin-top: -1em;
+  padding-left: 2em;
+}
+
+.md blockquote {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid rgba(255, 255, 255, 0.2);
+  padding: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.md code {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+  padding: 2px 4px;
+  font-size: 0.9em;
+  border-radius: 4px;
+}
+
+.md pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0.25em 0;
+  padding-top: 0.8em;
+  margin-top: -0.8em;
+}
+
+.md pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.md a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+.md a:hover {
+  text-decoration: underline;
+}
+
+.md img {
+  max-width: 100%;
+  height: auto;
+}
+
+.md table {
+  width: 100%;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+}
+
+.md table th,
+.md table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.md table th {
+  font-weight: bold;
+}
