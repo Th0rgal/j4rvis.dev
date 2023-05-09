@@ -10,17 +10,45 @@ export const useSendMessage = (addMessage: (msg: Message) => void) => {
 
   const { showError } = useNotifications();
 
+  const customFetch = async (
+    url: string,
+    options: RequestInit,
+    timeout: number
+  ) => {
+    const controller = new AbortController();
+    const { signal } = controller;
+
+    options = { ...options, signal };
+
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    try {
+      const response = await fetch(url, options);
+      clearTimeout(timeoutId);
+      return response;
+    } catch (error) {
+      if (error instanceof Error && error.name === "AbortError") {
+        throw new Error("Request timed out");
+      }
+      throw error;
+    }
+  };
+
   const sendMessage = async (messageContent: string) => {
     setWaiting(true);
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_BACKEND + "/ask", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token ? token : "",
+      const response = await customFetch(
+        process.env.NEXT_PUBLIC_BACKEND + "/ask",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token ? token : "",
+          },
+          body: JSON.stringify({ input: messageContent }),
         },
-        body: JSON.stringify({ input: messageContent }),
-      });
+        600000
+      ); // Set the timeout to 10 minutes
 
       if (response.ok) {
         const data = await response.json();
@@ -30,8 +58,12 @@ export const useSendMessage = (addMessage: (msg: Message) => void) => {
           addMessage({ content: data.content, bot: true });
         }
       } else failed = true;
-    } catch {
-      failed = true;
+    } catch (error) {
+      if (error instanceof Error && error.message === "Request timed out") {
+        showError("The request took too long to complete. Please try again.");
+      } else {
+        failed = true;
+      }
     }
 
     if (failed) {
