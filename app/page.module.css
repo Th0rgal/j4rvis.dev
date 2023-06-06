@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
   background: radial-gradient(at top 35% left 45%, #0a0c106c, transparent 35%),
     radial-gradient(at bottom center, #0a0c1052, transparent 35%),
     radial-gradient(circle at top -5% left 35%, #0a0c108a, transparent 25%),
